@@ -15386,8 +15386,66 @@
                     "paletteId": "",
                     "isPinned": false,
                     "persistent": false,
+                    "collisionGroup": "1",
                     "symbol": "actor_5",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Costs $$07$. Buy?"
+                                ],
+                                "avatarId": "",
+                                "__collapse": true
+                            },
+                            "id": "2c05b4d3-25c6-4230-a3a3-e8cd6cf29718"
+                        },
+                        {
+                            "command": "EVENT_CHOICE",
+                            "args": {
+                                "variable": "L0",
+                                "trueText": "Yes",
+                                "falseText": "No",
+                                "__collapse": true
+                            },
+                            "id": "c1611598-3619-4263-b2d7-c45f81e3c2ee"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "L0",
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_DEACTIVATE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "d15e6f4a-350a-400d-ac3b-40136a81f3c1"
+                                    },
+                                    {
+                                        "command": "EVENT_VARIABLE_MATH",
+                                        "args": {
+                                            "vectorX": "3",
+                                            "operation": "sub",
+                                            "other": "var",
+                                            "vectorY": "7",
+                                            "value": "0",
+                                            "minValue": "0",
+                                            "maxValue": "32767",
+                                            "clamp": false
+                                        },
+                                        "id": "92645416-26fc-41e9-ab90-495448984b8d"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "eba0e5a8-4c12-403d-9fb8-a9427f8ec18f"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
@@ -15477,9 +15535,66 @@
                     "paletteId": "",
                     "isPinned": false,
                     "persistent": false,
-                    "collisionGroup": "",
+                    "collisionGroup": "1",
                     "symbol": "actor_9",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Costs $$08$. Buy?"
+                                ],
+                                "avatarId": "",
+                                "__collapse": false
+                            },
+                            "id": "20a491e3-7db4-467f-a5d7-363df2fb7268"
+                        },
+                        {
+                            "command": "EVENT_CHOICE",
+                            "args": {
+                                "variable": "L0",
+                                "trueText": "Yes",
+                                "falseText": "No",
+                                "__collapse": true
+                            },
+                            "id": "23bafdd8-6107-4dfd-ab5c-a8390975117b"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "L0",
+                                "__collapseElse": true,
+                                "__collapse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_DEACTIVATE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "466eec72-ea3a-4f12-8587-28dfd0b54e45"
+                                    },
+                                    {
+                                        "command": "EVENT_VARIABLE_MATH",
+                                        "args": {
+                                            "vectorX": "3",
+                                            "operation": "sub",
+                                            "other": "var",
+                                            "vectorY": "8",
+                                            "value": "0",
+                                            "minValue": "0",
+                                            "maxValue": "32767",
+                                            "clamp": false
+                                        },
+                                        "id": "32470e4b-265d-42ef-80e2-b5e5ca8d2c74"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "801fb722-a2e1-4988-b641-4fb0381bd2b6"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
@@ -34450,6 +34565,36 @@
             "id": "1d8b3bdc-7a2a-437c-b9db-be66e63352ec__L0",
             "name": "storeSelect",
             "symbol": "var_storeselect"
+        },
+        {
+            "id": "7",
+            "name": "cookieCost",
+            "symbol": "var_cookiecost"
+        },
+        {
+            "id": "cdd38a28-7a53-40b1-9c50-fb2d075e2d51__L0",
+            "name": "boughtCookie",
+            "symbol": "var_boughtcookie"
+        },
+        {
+            "id": "8",
+            "name": "friesCost",
+            "symbol": "var_friescost"
+        },
+        {
+            "id": "9",
+            "name": "chipsCost",
+            "symbol": "var_chipscost"
+        },
+        {
+            "id": "10",
+            "name": "sodaCost",
+            "symbol": "var_sodacost"
+        },
+        {
+            "id": "11",
+            "name": "hotdogCost",
+            "symbol": "var_hotdogcost"
         }
     ],
     "engineFieldValues": [
@@ -34467,9 +34612,9 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1595,
-        "worldScrollY": 1401,
-        "zoom": 261.61422765614725,
+        "worldScrollX": 3910,
+        "worldScrollY": 456,
+        "zoom": 278.8912903776977,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
