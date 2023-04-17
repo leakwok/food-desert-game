@@ -876,7 +876,7 @@
                         "variable": "0",
                         "value": {
                             "type": "number",
-                            "value": 2
+                            "value": 6
                         },
                         "__collapse": true
                     },
@@ -31748,8 +31748,8 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 664,
+        "worldScrollX": 1256,
+        "worldScrollY": 330,
         "zoom": 159.11364433728158,
         "customColorsEnabled": false,
         "sgbEnabled": false,
