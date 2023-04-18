@@ -889,7 +889,7 @@
                             "type": "number",
                             "value": 6
                         },
-                        "__collapse": true,
+                        "__collapse": false,
                         "__comment": true
                     },
                     "id": "63ebc072-93a9-4ecf-a8b4-51cb4166eaae"
@@ -3614,10 +3614,10 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "You have $03$ left."
+                                    "You have $$03$ left."
                                 ],
                                 "avatarId": "",
-                                "__collapse": true
+                                "__collapse": false
                             },
                             "id": "16bea827-ac23-44ee-8c06-e29744c982f0"
                         }
@@ -16534,7 +16534,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "work_scene.png"
+            "filename": "work_scene.png",
+            "tileColors": []
         }
     ],
     "spriteSheets": [
@@ -34904,7 +34905,7 @@
             "symbol": "sound_tronimal_sound_effect",
             "filename": "Tronimal_Sound_Effects.sav",
             "type": "fxhammer",
-            "inode": "1970324837127439",
+            "inode": "32444057",
             "_v": 1680579602932
         }
     ],
@@ -35384,8 +35385,8 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 0,
-        "worldScrollY": 394.3999938964844,
-        "zoom": 224.80606126785278,
+        "worldScrollY": 0,
+        "zoom": 86.28943984210491,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -35413,9 +35414,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            207,
+            226,
             30,
-            592
+            648
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",

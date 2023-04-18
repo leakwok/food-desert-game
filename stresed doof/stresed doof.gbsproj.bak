@@ -1264,7 +1264,7 @@
                                 "args": {
                                     "variable": "0",
                                     "operator": ">=",
-                                    "comparator": 4,
+                                    "comparator": 20,
                                     "__collapseElse": false,
                                     "__collapse": false
                                 },
@@ -1288,7 +1288,7 @@
                                             "args": {
                                                 "text": [
                                                     "You do not have\nenough energy to\nwork.",
-                                                    "You need 4\nenergy and have\n$00$ energy."
+                                                    "You need 20\nenergy and have\n$00$ energy."
                                                 ],
                                                 "avatarId": "",
                                                 "__collapse": false
@@ -4946,7 +4946,7 @@
                 15,
                 15,
                 15,
-                15,
+                4,
                 0,
                 0,
                 15,
@@ -5009,7 +5009,7 @@
                 0,
                 0,
                 0,
-                15,
+                0,
                 0,
                 0,
                 15,
@@ -15143,7 +15143,7 @@
         },
         {
             "name": "Scene Work",
-            "backgroundId": "5ca3686f-13cb-43fb-ad3d-defc49472662",
+            "backgroundId": "7f33c745-8c66-430b-a903-6b0fca7ae84a",
             "width": 20,
             "height": 18,
             "type": "TOPDOWN",
@@ -15539,6 +15539,20 @@
                         "clamp": false
                     },
                     "id": "18a10a01-ed09-459b-a1f2-57f71d0980c9"
+                },
+                {
+                    "command": "EVENT_VARIABLE_MATH",
+                    "args": {
+                        "vectorX": "L0",
+                        "operation": "set",
+                        "other": "rnd",
+                        "vectorY": "L0",
+                        "value": "0",
+                        "minValue": 30,
+                        "maxValue": 50,
+                        "clamp": false
+                    },
+                    "id": "2993357e-4bf3-46d7-91af-39567f5c06db"
                 },
                 {
                     "command": "EVENT_VARIABLE_MATH",
@@ -16511,6 +16525,16 @@
             "imageHeight": 256,
             "filename": "underground.png",
             "tileColors": []
+        },
+        {
+            "id": "7f33c745-8c66-430b-a903-6b0fca7ae84a",
+            "name": "work_scene",
+            "symbol": "bg_work_scene",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "work_scene.png"
         }
     ],
     "spriteSheets": [
@@ -34880,7 +34904,7 @@
             "symbol": "sound_tronimal_sound_effect",
             "filename": "Tronimal_Sound_Effects.sav",
             "type": "fxhammer",
-            "inode": "15199648742516893",
+            "inode": "1970324837127439",
             "_v": 1680579602932
         }
     ],
@@ -35359,9 +35383,9 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 3603.251953125,
-        "worldScrollY": 280.9756164550781,
-        "zoom": 486.25,
+        "worldScrollX": 0,
+        "worldScrollY": 394.3999938964844,
+        "zoom": 224.80606126785278,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -35389,9 +35413,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            204,
+            207,
             30,
-            584
+            592
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
