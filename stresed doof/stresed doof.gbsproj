@@ -67,7 +67,7 @@
                         "variable": "0",
                         "value": {
                             "type": "number",
-                            "value": 60
+                            "value": 3
                         },
                         "__collapse": false
                     },
@@ -484,6 +484,17 @@
                         "__collapse": true
                     },
                     "id": "11cf0448-97ba-48bc-9481-2a30191fcc95"
+                },
+                {
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "33",
+                        "value": {
+                            "type": "number",
+                            "value": 2
+                        }
+                    },
+                    "id": "28c8ff71-16de-44a2-a632-f08f56ca78f3"
                 }
             ],
             "playerHit1Script": [],
@@ -999,7 +1010,7 @@
                                 "args": {
                                     "variable": "5",
                                     "items": 3,
-                                    "option1": "Bike (-5 energy)",
+                                    "option1": "Bike (-2 energy)",
                                     "option2": "Car (-$5)",
                                     "option3": "Go back",
                                     "option4": "",
@@ -1154,7 +1165,7 @@
                         "operator": "==",
                         "comparator": 3,
                         "__collapseElse": false,
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -1255,7 +1266,7 @@
                                     "operator": ">=",
                                     "comparator": 4,
                                     "__collapseElse": false,
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -1276,7 +1287,8 @@
                                             "command": "EVENT_TEXT",
                                             "args": {
                                                 "text": [
-                                                    "You do not have\nenough energy to\nwork. You need 4\nenergy and have\n$00$ energy."
+                                                    "You do not have\nenough energy to\nwork.",
+                                                    "You need 4\nenergy and have\n$00$ energy."
                                                 ],
                                                 "avatarId": "",
                                                 "__collapse": false
@@ -4636,7 +4648,7 @@
                                                                                                                 "command": "EVENT_ACTOR_SET_STATE",
                                                                                                                 "args": {
                                                                                                                     "actorId": "$self$",
-                                                                                                                    "spriteStateId": "dead heart"
+                                                                                                                    "spriteStateId": "half heart"
                                                                                                                 },
                                                                                                                 "id": "5f5a05fd-0067-421f-b9e7-99195872edc0"
                                                                                                             }
@@ -4677,11 +4689,20 @@
                                 "comparator": 0,
                                 "__collapseElse": true,
                                 "__disableElse": true,
-                                "__collapse": true,
+                                "__collapse": false,
                                 "__comment": false
                             },
                             "children": {
                                 "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "dead heart",
+                                            "__collapse": true
+                                        },
+                                        "id": "adb854be-deda-4291-9bae-4429d5480b03"
+                                    },
                                     {
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
@@ -6605,7 +6626,7 @@
                                                                                                                 "command": "EVENT_ACTOR_SET_STATE",
                                                                                                                 "args": {
                                                                                                                     "actorId": "$self$",
-                                                                                                                    "spriteStateId": "dead heart"
+                                                                                                                    "spriteStateId": "half heart"
                                                                                                                 },
                                                                                                                 "id": "6b42fa1b-ec8f-4c3e-96d6-b4a9ed731a60"
                                                                                                             }
@@ -6651,6 +6672,15 @@
                             },
                             "children": {
                                 "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "dead heart",
+                                            "__collapse": true
+                                        },
+                                        "id": "83fd397d-130a-4307-86a1-a657423880f2"
+                                    },
                                     {
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
@@ -7195,8 +7225,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "556f2a29-d65c-40a1-8200-71f4663547be",
-                    "x": 10,
-                    "y": 3
+                    "x": 6,
+                    "y": 4
                 },
                 {
                     "name": "",
@@ -7227,8 +7257,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "6c892b33-92b5-4e1a-9966-f1fc0f47cdcd",
-                    "x": 3,
-                    "y": 4
+                    "x": 16,
+                    "y": 12
                 },
                 {
                     "name": "",
@@ -7260,7 +7290,7 @@
                     "hit3Script": [],
                     "id": "3474078c-d05a-43ba-b626-dc1c3b4f450f",
                     "x": 13,
-                    "y": 4
+                    "y": 3
                 },
                 {
                     "name": "",
@@ -7291,8 +7321,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "7d4c4dfe-9c94-4e95-88bb-1db425782bf3",
-                    "x": 6,
-                    "y": 3
+                    "x": 16,
+                    "y": 10
                 },
                 {
                     "name": "",
@@ -7746,7 +7776,7 @@
                                                                                                                 "command": "EVENT_ACTOR_SET_STATE",
                                                                                                                 "args": {
                                                                                                                     "actorId": "$self$",
-                                                                                                                    "spriteStateId": "dead heart"
+                                                                                                                    "spriteStateId": "half heart"
                                                                                                                 },
                                                                                                                 "id": "71c27c4e-6cf8-405a-83df-123f62eaa653"
                                                                                                             }
@@ -7787,11 +7817,20 @@
                                 "comparator": 0,
                                 "__collapseElse": true,
                                 "__disableElse": true,
-                                "__collapse": true,
+                                "__collapse": false,
                                 "__comment": false
                             },
                             "children": {
                                 "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "dead heart",
+                                            "__collapse": true
+                                        },
+                                        "id": "e88e2eb5-41ae-4588-a33d-848c12e2de65"
+                                    },
                                     {
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
@@ -7799,7 +7838,8 @@
                                             "x": 9,
                                             "y": 9,
                                             "direction": "",
-                                            "fadeSpeed": "2"
+                                            "fadeSpeed": "2",
+                                            "__collapse": true
                                         },
                                         "id": "5e7a403c-3012-4883-9017-6de73c6205f2"
                                     }
@@ -7836,7 +7876,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "939af24f-a7b5-41e4-a5df-52b7356861e3",
-                    "x": 8,
+                    "x": 9,
                     "y": 4
                 }
             ],
@@ -12156,7 +12196,7 @@
                                                                                                                 "command": "EVENT_ACTOR_SET_STATE",
                                                                                                                 "args": {
                                                                                                                     "actorId": "$self$",
-                                                                                                                    "spriteStateId": "dead heart"
+                                                                                                                    "spriteStateId": "half heart"
                                                                                                                 },
                                                                                                                 "id": "61ad4f19-db08-49f2-bd7d-23ea087ec1d4"
                                                                                                             }
@@ -12202,6 +12242,15 @@
                             },
                             "children": {
                                 "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "dead heart",
+                                            "__collapse": true
+                                        },
+                                        "id": "12daa78b-b485-49a8-8180-faefd7832136"
+                                    },
                                     {
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
@@ -15062,20 +15111,21 @@
                                                         "id": "309d9639-23c2-468d-9409-4de824694e54"
                                                     }
                                                 ],
-                                                "false": []
+                                                "false": [
+                                                    {
+                                                        "command": "EVENT_SWITCH_SCENE",
+                                                        "args": {
+                                                            "sceneId": "87e28999-c696-49d1-b94a-1a03a8805bc0",
+                                                            "x": 8,
+                                                            "y": 28,
+                                                            "direction": "",
+                                                            "fadeSpeed": "2"
+                                                        },
+                                                        "id": "1b073c09-8476-4101-92af-d812bbde0bc1"
+                                                    }
+                                                ]
                                             },
                                             "id": "6c67c993-a632-457f-8989-eaee7509993d"
-                                        },
-                                        {
-                                            "command": "EVENT_SWITCH_SCENE",
-                                            "args": {
-                                                "sceneId": "87e28999-c696-49d1-b94a-1a03a8805bc0",
-                                                "x": 8,
-                                                "y": 28,
-                                                "direction": "",
-                                                "fadeSpeed": "2"
-                                            },
-                                            "id": "1b073c09-8476-4101-92af-d812bbde0bc1"
                                         }
                                     ]
                                 },
@@ -15470,11 +15520,11 @@
             "triggers": [],
             "script": [
                 {
-                    "command": "EVENT_ACTOR_HIDE",
+                    "command": "EVENT_ACTOR_DEACTIVATE",
                     "args": {
                         "actorId": "$self$"
                     },
-                    "id": "06eeae0e-0d8a-4ae3-b4c7-ad212da8a364"
+                    "id": "6b6c658a-53fa-4b4b-a199-5a76f0c8d5f3"
                 },
                 {
                     "command": "EVENT_VARIABLE_MATH",
@@ -15520,22 +15570,24 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "You came in \nand worked.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            "You came in\nand worked.",
+                            "Earned $$L0$.",
+                            "Going home..."
                         ],
                         "avatarId": ""
                     },
-                    "id": "043538da-1860-4176-977c-72716b4f427d"
+                    "id": "461fa3a1-bf29-4b75-9ddb-b0203f83d55e"
                 },
                 {
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "Earned $03$.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            "Earned $$L0$.\n\n\n\n\n"
                         ],
                         "avatarId": "",
-                        "__collapse": true
+                        "__comment": true
                     },
-                    "id": "e1e68fdb-8273-44a7-8751-15095f60f56c"
+                    "id": "448bb468-3789-4ec6-9386-79e5a7bcba88"
                 },
                 {
                     "command": "EVENT_TEXT",
@@ -15585,9 +15637,9 @@
                             "Going home..."
                         ],
                         "avatarId": "",
-                        "__comment": false
+                        "__comment": true
                     },
-                    "id": "e3015d26-5740-4e52-b4f7-628fcd3efaee"
+                    "id": "7470ddd7-eab8-425d-9634-46c46472035b"
                 },
                 {
                     "command": "EVENT_SWITCH_SCENE",
@@ -25276,29 +25328,29 @@
                                     "id": "222c7036-7481-404e-b2a2-3b7124e7edde",
                                     "tiles": [
                                         {
-                                            "id": "7ae2d802-f04f-4658-904f-bb6e9c989526",
+                                            "id": "6ea95338-620e-4f68-bc72-18d93ede9036",
                                             "x": 0,
                                             "y": 0,
                                             "sliceX": 0,
                                             "sliceY": 0,
+                                            "palette": 0,
                                             "flipX": false,
                                             "flipY": false,
-                                            "palette": 0,
-                                            "paletteIndex": 0,
                                             "objPalette": "OBP0",
+                                            "paletteIndex": 0,
                                             "priority": false
                                         },
                                         {
-                                            "id": "33f9fd34-22be-4654-98a7-48144e2f258e",
+                                            "id": "c201f16f-c045-4109-ab80-cf04eebfbc77",
                                             "x": 8,
                                             "y": 0,
                                             "sliceX": 8,
                                             "sliceY": 0,
+                                            "palette": 0,
                                             "flipX": false,
                                             "flipY": false,
-                                            "palette": 0,
-                                            "paletteIndex": 0,
                                             "objPalette": "OBP0",
+                                            "paletteIndex": 0,
                                             "priority": false
                                         }
                                     ]
@@ -34828,7 +34880,7 @@
             "symbol": "sound_tronimal_sound_effect",
             "filename": "Tronimal_Sound_Effects.sav",
             "type": "fxhammer",
-            "inode": "1970324837127439",
+            "inode": "15199648742516893",
             "_v": 1680579602932
         }
     ],
@@ -35307,9 +35359,9 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 916.7999877929688,
-        "worldScrollY": 412,
-        "zoom": 459.1813093214205,
+        "worldScrollX": 3603.251953125,
+        "worldScrollY": 280.9756164550781,
+        "zoom": 486.25,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -35337,9 +35389,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            207,
+            204,
             30,
-            592
+            584
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
