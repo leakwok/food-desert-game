@@ -1047,8 +1047,8 @@
                                                 "other": "rnd",
                                                 "vectorY": "L0",
                                                 "value": "0",
-                                                "minValue": 20,
-                                                "maxValue": 60,
+                                                "minValue": 80,
+                                                "maxValue": 100,
                                                 "clamp": false,
                                                 "__collapse": false
                                             },
@@ -7165,7 +7165,7 @@
                     "hit3Script": [],
                     "id": "cdd38a28-7a53-40b1-9c50-fb2d075e2d51",
                     "x": 16,
-                    "y": 4
+                    "y": 3
                 },
                 {
                     "name": "",
@@ -7195,7 +7195,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "556f2a29-d65c-40a1-8200-71f4663547be",
-                    "x": 12,
+                    "x": 10,
                     "y": 3
                 },
                 {
@@ -7259,8 +7259,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "3474078c-d05a-43ba-b626-dc1c3b4f450f",
-                    "x": 14,
-                    "y": 3
+                    "x": 13,
+                    "y": 4
                 },
                 {
                     "name": "",
@@ -7836,7 +7836,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "939af24f-a7b5-41e4-a5df-52b7356861e3",
-                    "x": 9,
+                    "x": 8,
                     "y": 4
                 }
             ],
@@ -7984,7 +7984,7 @@
                                             "operator": "<",
                                             "vectorY": "7",
                                             "__collapseElse": false,
-                                            "__collapse": true
+                                            "__collapse": false
                                         },
                                         "children": {
                                             "true": [
@@ -8014,7 +8014,7 @@
                                                 {
                                                     "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "variable": "L0",
+                                                        "variable": "L1",
                                                         "__collapseElse": true,
                                                         "__collapse": false
                                                     },
@@ -8127,7 +8127,7 @@
                                 "operator": "==",
                                 "comparator": 2,
                                 "__collapseElse": true,
-                                "__collapse": true
+                                "__collapse": false
                             },
                             "children": {
                                 "true": [
@@ -8149,7 +8149,7 @@
                                             "operator": "<",
                                             "vectorY": "9",
                                             "__collapseElse": false,
-                                            "__collapse": true
+                                            "__collapse": false
                                         },
                                         "children": {
                                             "true": [
@@ -15511,7 +15511,8 @@
                             "You came in \nand worked.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                         ],
                         "avatarId": "",
-                        "__collapse": false
+                        "__collapse": false,
+                        "__comment": true
                     },
                     "id": "abfcd91d-3be1-449d-a264-e35ca1d8079f"
                 },
@@ -15519,12 +15520,74 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "Earned $$34$.\n\n\n\n\n\n\n\n\n\n\n\n\n",
-                            "Going home...\n\n\n\n\n\n\n\n"
+                            "You came in \nand worked.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                         ],
                         "avatarId": ""
                     },
+                    "id": "043538da-1860-4176-977c-72716b4f427d"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Earned $03$.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                        ],
+                        "avatarId": "",
+                        "__collapse": true
+                    },
+                    "id": "e1e68fdb-8273-44a7-8751-15095f60f56c"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Going home...\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                        ],
+                        "avatarId": "",
+                        "__comment": true
+                    },
+                    "id": "2f8bf489-e9b2-42a5-98fb-d58e8d6ff77b"
+                },
+                {
+                    "command": "EVENT_WAIT",
+                    "args": {
+                        "time": 1,
+                        "frames": 30,
+                        "__comment": true
+                    },
+                    "id": "691524bb-5c69-46b2-9649-83a5d852d74e"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Earned $$34$.\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                        ],
+                        "avatarId": "",
+                        "__collapse": true,
+                        "__comment": true
+                    },
                     "id": "133ee18b-3d82-4b21-a413-509b9137ce92"
+                },
+                {
+                    "command": "EVENT_WAIT",
+                    "args": {
+                        "time": 1,
+                        "frames": 30,
+                        "__comment": true
+                    },
+                    "id": "442b36c5-cb82-4162-818e-848a44902c90"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Going home..."
+                        ],
+                        "avatarId": "",
+                        "__comment": false
+                    },
+                    "id": "e3015d26-5740-4e52-b4f7-628fcd3efaee"
                 },
                 {
                     "command": "EVENT_SWITCH_SCENE",
@@ -15540,7 +15603,8 @@
             ],
             "playerHit1Script": [],
             "playerHit2Script": [],
-            "playerHit3Script": []
+            "playerHit3Script": [],
+            "autoFadeEventCollapse": true
         },
         {
             "name": "Game Over",
@@ -16129,7 +16193,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "home2.png"
+            "filename": "home2.png",
+            "tileColors": []
         },
         {
             "id": "c5a50f68-05df-4cbe-bbaf-e51aadb410e7",
@@ -34763,7 +34828,7 @@
             "symbol": "sound_tronimal_sound_effect",
             "filename": "Tronimal_Sound_Effects.sav",
             "type": "fxhammer",
-            "inode": "15199648742516893",
+            "inode": "1970324837127439",
             "_v": 1680579602932
         }
     ],
@@ -35027,6 +35092,16 @@
             "symbol": "var_watermelonhearts"
         },
         {
+            "id": "33",
+            "name": "bikeHeartsCost",
+            "symbol": "var_bikeheartscost"
+        },
+        {
+            "id": "34",
+            "name": "income",
+            "symbol": "var_income_0"
+        },
+        {
             "id": "c11ce07f-104e-4d22-bb8d-815417d21dd4__L0",
             "name": "Immunity",
             "symbol": "var_immunity"
@@ -35212,19 +35287,9 @@
             "symbol": "var_sodabought_1"
         },
         {
-            "id": "33",
-            "name": "bikeHeartsCost",
-            "symbol": "var_bikeheartscost"
-        },
-        {
             "id": "1d8b3bdc-7a2a-437c-b9db-be66e63352ec__L1",
             "name": "continueGrocery",
             "symbol": "var_continuegrocery"
-        },
-        {
-            "id": "34",
-            "name": "income",
-            "symbol": "var_income_0"
         }
     ],
     "engineFieldValues": [
@@ -35242,9 +35307,9 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 646.5040283203125,
-        "worldScrollY": 70.24390411376953,
-        "zoom": 312.8636443372816,
+        "worldScrollX": 916.7999877929688,
+        "worldScrollY": 412,
+        "zoom": 459.1813093214205,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -35272,9 +35337,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            205,
+            207,
             30,
-            584
+            592
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",

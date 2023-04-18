@@ -910,6 +910,21 @@
                     "id": "106d0458-8d01-4d0c-a745-e635876b0d28"
                 },
                 {
+                    "command": "EVENT_VARIABLE_MATH",
+                    "args": {
+                        "vectorX": "34",
+                        "operation": "set",
+                        "other": "rnd",
+                        "vectorY": "L0",
+                        "value": "0",
+                        "minValue": 30,
+                        "maxValue": 35,
+                        "clamp": false,
+                        "__collapse": true
+                    },
+                    "id": "02678a8f-2e09-4cdf-bf0c-401e33ff47b2"
+                },
+                {
                     "command": "EVENT_SET_FALSE",
                     "args": {
                         "variable": "1",
@@ -7138,7 +7153,8 @@
                         {
                             "command": "EVENT_ACTOR_SHOW",
                             "args": {
-                                "actorId": "$self$"
+                                "actorId": "$self$",
+                                "__comment": false
                             },
                             "id": "ff70fb05-6480-4cc7-bb2f-ebf4aa59d7a8"
                         }
@@ -7168,7 +7184,8 @@
                         {
                             "command": "EVENT_ACTOR_SHOW",
                             "args": {
-                                "actorId": "$self$"
+                                "actorId": "$self$",
+                                "__comment": false
                             },
                             "id": "85498917-bf1e-484a-abba-383f3d0f8f0a"
                         }
@@ -7178,8 +7195,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "556f2a29-d65c-40a1-8200-71f4663547be",
-                    "x": 11,
-                    "y": 2
+                    "x": 12,
+                    "y": 3
                 },
                 {
                     "name": "",
@@ -7199,7 +7216,8 @@
                         {
                             "command": "EVENT_ACTOR_SHOW",
                             "args": {
-                                "actorId": "$self$"
+                                "actorId": "$self$",
+                                "__comment": false
                             },
                             "id": "8c6e732a-425b-493d-9a23-a3da008c97b9"
                         }
@@ -7209,8 +7227,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "6c892b33-92b5-4e1a-9966-f1fc0f47cdcd",
-                    "x": 5,
-                    "y": 2
+                    "x": 3,
+                    "y": 4
                 },
                 {
                     "name": "",
@@ -7230,7 +7248,8 @@
                         {
                             "command": "EVENT_ACTOR_SHOW",
                             "args": {
-                                "actorId": "$self$"
+                                "actorId": "$self$",
+                                "__comment": false
                             },
                             "id": "021a63ff-4294-4aeb-adbc-62fb40aac46a"
                         }
@@ -7241,7 +7260,7 @@
                     "hit3Script": [],
                     "id": "3474078c-d05a-43ba-b626-dc1c3b4f450f",
                     "x": 14,
-                    "y": 2
+                    "y": 3
                 },
                 {
                     "name": "",
@@ -7261,7 +7280,8 @@
                         {
                             "command": "EVENT_ACTOR_SHOW",
                             "args": {
-                                "actorId": "$self$"
+                                "actorId": "$self$",
+                                "__comment": false
                             },
                             "id": "0aad7ca4-ba88-4f70-af5c-39aa5c3b160b"
                         }
@@ -7271,8 +7291,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "7d4c4dfe-9c94-4e95-88bb-1db425782bf3",
-                    "x": 8,
-                    "y": 2
+                    "x": 6,
+                    "y": 3
                 },
                 {
                     "name": "",
@@ -7816,7 +7836,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "939af24f-a7b5-41e4-a5df-52b7356861e3",
-                    "x": 10,
+                    "x": 9,
                     "y": 4
                 }
             ],
@@ -7903,7 +7923,7 @@
                     "y": 6,
                     "symbol": "trigger_7",
                     "width": 16,
-                    "height": null,
+                    "height": 1,
                     "script": [
                         {
                             "command": "EVENT_TEXT",
@@ -14536,7 +14556,8 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "$self$"
+                        "actorId": "$self$",
+                        "__collapse": false
                     },
                     "id": "4a266bf1-442c-4aff-a91f-fcd531b34b1d"
                 },
@@ -14547,7 +14568,8 @@
                             "Press on the gas \n(enter)."
                         ],
                         "avatarId": "",
-                        "__comment": true
+                        "__comment": true,
+                        "__collapse": true
                     },
                     "id": "6ad4cf97-f12e-4418-8bae-bff2f28d3f66"
                 },
@@ -14559,7 +14581,8 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": false
+                        "__collapse": false,
+                        "__comment": false
                     },
                     "children": {
                         "true": [
@@ -14570,7 +14593,8 @@
                                     "x": 10,
                                     "y": 9,
                                     "direction": "",
-                                    "fadeSpeed": 1
+                                    "fadeSpeed": 1,
+                                    "__collapse": false
                                 },
                                 "id": "6780cf92-72db-4895-a332-292438047c1b"
                             }
@@ -14581,7 +14605,8 @@
             ],
             "playerHit1Script": [],
             "playerHit2Script": [],
-            "playerHit3Script": []
+            "playerHit3Script": [],
+            "autoFadeEventCollapse": true
         },
         {
             "name": "Scene 13",
@@ -15468,25 +15493,10 @@
                 {
                     "command": "EVENT_VARIABLE_MATH",
                     "args": {
-                        "vectorX": "L0",
-                        "operation": "set",
-                        "other": "rnd",
-                        "vectorY": "L0",
-                        "value": "0",
-                        "minValue": 30,
-                        "maxValue": 35,
-                        "clamp": false,
-                        "__collapse": false
-                    },
-                    "id": "a386d2af-fde7-401b-b742-820f1557d4c8"
-                },
-                {
-                    "command": "EVENT_VARIABLE_MATH",
-                    "args": {
                         "vectorX": "3",
                         "operation": "add",
                         "other": "var",
-                        "vectorY": "L0",
+                        "vectorY": "34",
                         "value": "0",
                         "minValue": "0",
                         "maxValue": "32767",
@@ -15498,7 +15508,7 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou came in \nand worked"
+                            "You came in \nand worked.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                         ],
                         "avatarId": "",
                         "__collapse": false
@@ -15509,8 +15519,8 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "\n\n\n\n\n\n\n\n\n\n\n\nyou have earned \n$ $L0$",
-                            "\n\n\n\n\n\n\nyou are going back\nto your house"
+                            "Earned $$34$.\n\n\n\n\n\n\n\n\n\n\n\n\n",
+                            "Going home...\n\n\n\n\n\n\n\n"
                         ],
                         "avatarId": ""
                     },
@@ -35210,6 +35220,11 @@
             "id": "1d8b3bdc-7a2a-437c-b9db-be66e63352ec__L1",
             "name": "continueGrocery",
             "symbol": "var_continuegrocery"
+        },
+        {
+            "id": "34",
+            "name": "income",
+            "symbol": "var_income_0"
         }
     ],
     "engineFieldValues": [
@@ -35227,8 +35242,8 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 496.2601623535156,
-        "worldScrollY": 2229.593505859375,
+        "worldScrollX": 646.5040283203125,
+        "worldScrollY": 70.24390411376953,
         "zoom": 312.8636443372816,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -35257,9 +35272,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
+            205,
             30,
-            30,
-            759
+            584
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
