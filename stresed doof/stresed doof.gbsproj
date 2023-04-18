@@ -895,6 +895,32 @@
                     "id": "63ebc072-93a9-4ecf-a8b4-51cb4166eaae"
                 },
                 {
+                    "command": "EVENT_IF_VALUE",
+                    "args": {
+                        "variable": "0",
+                        "operator": ">",
+                        "comparator": 60,
+                        "__collapseElse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "0",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 60
+                                    }
+                                },
+                                "id": "564e6e50-3869-4143-bc69-1b3cd5444998"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "a4634801-dd67-458d-b317-9998e5803554"
+                },
+                {
                     "command": "EVENT_SET_VALUE",
                     "args": {
                         "variable": "4",
@@ -15570,7 +15596,7 @@
                         "operation": "sub",
                         "other": "val",
                         "vectorY": "L0",
-                        "value": 3,
+                        "value": 40,
                         "minValue": "0",
                         "maxValue": "32767",
                         "clamp": false
@@ -34942,7 +34968,7 @@
             "symbol": "sound_tronimal_sound_effect",
             "filename": "Tronimal_Sound_Effects.sav",
             "type": "fxhammer",
-            "inode": "15199648742516893",
+            "inode": "1970324837127439",
             "_v": 1680579602932
         }
     ],
@@ -35422,7 +35448,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 0,
-        "worldScrollY": 14.959349632263184,
+        "worldScrollY": 21.600000381469727,
         "zoom": 86.28943984210491,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -35451,9 +35477,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            203,
+            206,
             30,
-            585
+            593
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",

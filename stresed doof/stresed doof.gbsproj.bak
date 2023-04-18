@@ -991,7 +991,7 @@
                         "operator": "<=",
                         "comparator": 2,
                         "__collapseElse": false,
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -1254,7 +1254,7 @@
                         "variable": "4",
                         "operator": "==",
                         "comparator": 4,
-                        "__collapseElse": false,
+                        "__collapseElse": true,
                         "__collapse": false
                     },
                     "children": {
@@ -1318,7 +1318,7 @@
                 {
                     "command": "EVENT_IF_VALUE",
                     "args": {
-                        "variable": "L0",
+                        "variable": "4",
                         "operator": "==",
                         "comparator": 5,
                         "__collapseElse": true
@@ -34942,7 +34942,7 @@
             "symbol": "sound_tronimal_sound_effect",
             "filename": "Tronimal_Sound_Effects.sav",
             "type": "fxhammer",
-            "inode": "1970324837127439",
+            "inode": "15199648742516893",
             "_v": 1680579602932
         }
     ],
@@ -35422,7 +35422,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 0,
-        "worldScrollY": 21.600000381469727,
+        "worldScrollY": 14.959349632263184,
         "zoom": 86.28943984210491,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -35451,9 +35451,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            206,
+            203,
             30,
-            593
+            585
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
