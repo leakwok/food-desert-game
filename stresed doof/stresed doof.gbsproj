@@ -961,7 +961,7 @@
                             "Where would you \nlike to go?"
                         ],
                         "avatarId": "",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "bc0a6065-7213-4fc3-86da-9e22ddbcead0"
                 },
@@ -969,18 +969,18 @@
                     "command": "EVENT_MENU",
                     "args": {
                         "variable": "4",
-                        "items": 4,
+                        "items": 5,
                         "option1": "Fast food",
                         "option2": "Convenience store",
                         "option3": "Grocery store",
                         "option4": "Work",
-                        "option5": "",
+                        "option5": "Move out",
                         "option6": "",
                         "option7": "",
                         "option8": "",
                         "cancelOnB": false,
                         "layout": "dialogue",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "6b702764-25c6-4713-9aa5-4e28228117d4"
                 },
@@ -1264,7 +1264,7 @@
                                 "args": {
                                     "variable": "0",
                                     "operator": ">=",
-                                    "comparator": 20,
+                                    "comparator": 40,
                                     "__collapseElse": false,
                                     "__collapse": false
                                 },
@@ -1288,7 +1288,7 @@
                                             "args": {
                                                 "text": [
                                                     "You do not have\nenough energy to\nwork.",
-                                                    "You need 20\nenergy and have\n$00$ energy."
+                                                    "You need 40\nenergy and have\n$00$ energy."
                                                 ],
                                                 "avatarId": "",
                                                 "__collapse": false
@@ -1314,6 +1314,43 @@
                         "false": []
                     },
                     "id": "da9d85eb-e76a-48c5-9613-e93ef7a8f8c2"
+                },
+                {
+                    "command": "EVENT_IF_VALUE",
+                    "args": {
+                        "variable": "L0",
+                        "operator": "==",
+                        "comparator": 5,
+                        "__collapseElse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "You do not have \nenough money\nto move out.",
+                                        "You need $100,000\nand have $$03$."
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "6969f3a1-ce6f-485e-ba93-cca152501f86"
+                            },
+                            {
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "1d8b3bdc-7a2a-437c-b9db-be66e63352ec",
+                                    "x": 11,
+                                    "y": 8,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                },
+                                "id": "6f42a455-a646-45f4-a75e-57f8892e76ff"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "a5212a74-ca1d-4c6f-a0fb-9a858d7d8d7f"
                 }
             ],
             "playerHit1Script": [],
@@ -34905,7 +34942,7 @@
             "symbol": "sound_tronimal_sound_effect",
             "filename": "Tronimal_Sound_Effects.sav",
             "type": "fxhammer",
-            "inode": "32444057",
+            "inode": "1970324837127439",
             "_v": 1680579602932
         }
     ],
@@ -35385,7 +35422,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 0,
-        "worldScrollY": 0,
+        "worldScrollY": 21.600000381469727,
         "zoom": 86.28943984210491,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -35414,9 +35451,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            226,
+            206,
             30,
-            648
+            593
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
